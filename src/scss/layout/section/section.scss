@@ -1,6 +1,6 @@
 .section {
     @include v-align;
-    height: 100%;
+    min-height: 100vh;
     text-align: center;
     @supports (display: flex) {
         display: flex;
