@@ -1,0 +1,10 @@
+&__gap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 14rem;
+  height: .7rem;
+  background: linear-gradient(to bottom, map-deep-get($laptop, gap, background));
+  border-radius: map-deep-get($laptop, gap, radius) map-deep-get($laptop, gap, radius) 0 0;
+}

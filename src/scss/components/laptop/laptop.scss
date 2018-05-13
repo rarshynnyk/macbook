@@ -1,0 +1,17 @@
+.laptop {
+    @extend %clearfix;
+    position: relative;
+    perspective-origin: 50% 100%;
+    transform-style: preserve-3d;
+    perspective: 4000px;
+
+    @import 'laptop-case';
+    @import 'laptop-speaker';
+    @import 'laptop-keyboard';
+    @import 'laptop-key';
+    @import 'laptop-sign';
+    @import 'laptop-touchpad';
+    @import 'laptop-hinge';
+    @import 'laptop-gap';
+    @import 'laptop-screen';
+}

@@ -1,0 +1,20 @@
+&__case {
+  position: relative;
+  background: map-deep-get($laptop, case, background);
+  border-radius: map-deep-get($laptop, case, radius);
+  width: 85.8rem;
+  height: 59.9rem;
+
+  &--top {
+    padding: .5rem;
+    transform-origin: 0 100%;
+    transform: rotateX(-70deg) translateY(5px);
+    margin-top: -250px;
+  }
+
+  &--bottom {
+    box-shadow: 0 1.8rem 1rem -1.5rem map-deep-get($laptop, case, shadowColor);
+    padding: 4.7rem 3.8rem 1.4rem;
+    z-index: 1;
+  }
+}

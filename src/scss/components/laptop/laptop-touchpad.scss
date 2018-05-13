@@ -1,0 +1,20 @@
+&__touchpad {
+    position: relative;
+    width: 38.4rem;
+    height: 24rem;
+    border-radius: map-deep-get($laptop, touchpad, radius);
+    border: 0.1rem solid map-deep-get($laptop, touchpad, borderColor);
+    margin: 0 auto;
+    box-shadow: 0 0 0 1px map-deep-get($laptop, touchpad, shadowColor);
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        box-shadow: inset 0 0 0 1px map-deep-get($laptop, touchpad, shadowColor);
+        border-radius: inherit;
+    }
+}

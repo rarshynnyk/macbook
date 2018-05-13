@@ -1,0 +1,55 @@
+&__sign {
+  display: block;
+  color: map-deep-get($laptop, sign, color);
+  margin: 0.1rem;
+
+  &--small {
+    @include rem-font-size(10px);
+  }
+
+  &--top,
+  &--bottom,
+  &--left,
+  &--right {
+    position: absolute;
+    margin: 0;
+  }
+
+  &--bottom {
+    bottom: 0.6rem;
+  }
+
+  &--left {
+    left: 1rem;
+  }
+
+  &--right {
+    right: 1rem;
+  }
+
+  &--top {
+    top: 0.6rem;
+  }
+
+  &--triangle {
+    &-left {
+      @include triangle(4px 6px, currentColor, left);
+    }
+
+    &-up {
+      @include triangle(4px 6px, currentColor, up);
+    }
+
+    &-down {
+      @include triangle(4px 6px, currentColor, down);
+    }
+
+    &-right {
+      @include triangle(4px 6px, currentColor, right);
+    }
+  }
+
+  .laptop__key--small & {
+    margin: 0;
+  }
+}

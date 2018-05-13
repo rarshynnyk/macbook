@@ -1,0 +1,10 @@
+.section {
+    @include v-align;
+    height: 100%;
+    text-align: center;
+    @supports (display: flex) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,58 @@
+$laptop: (
+  case: (
+    background: map-get($baseColors, spaceGray),
+    radius: 3rem,
+    shadowColor: rgba(map-get($baseColors, dark), .5)
+  ),
+
+  keyboard: (
+    radius: .8rem,
+    shadowColor: map-deep-get($baseColors, spaceGray100)
+  ),
+
+  key: (
+    width: 5rem,
+    height: 4.82rem,
+    defaultBg: map-get($baseColors, dark100),
+    activeBg: darken(map-get($baseColors, dark100), 5%),
+    characterBg: unquote('#3f4044 0%,#32353c 7%,#30333a 11%,#282b32 18%,#292c33 20%,#23262d 24%,#24272e 27%,#21242b 31%,#25282f 33%,#1f2229 36%,#1f2229 44%,#191c23 53%,#1b1e25 56%,#181b22 58%,#171a21 64%,#13161d 69%,#171a21 71%,#0f1219 76%,#13161d 78%,#13161f 82%,#161922 84%,#14171e 89%,#15191a 98%,#111518 100%'),
+    verticalFirstBg: unquote('#161616 0%,#1b1b1b 7%,#141414 36%,#101010 43%,#0c0c0c 71%,#040404 100%'),
+    verticalLastBg: unquote('#000209 0%,#0a0d14 13%,#181b22 50%,#171a21 100%'),
+    radius: .5rem,
+    borderColor: map-get($baseColors, spaceGray200)
+  ),
+
+  sign: (
+    color: map-get($baseColors, light)
+  ),
+
+  touchpad: (
+    radius: 1rem,
+    borderColor: map-get($baseColors, spaceGray300),
+    shadowColor: map-get($baseColors, gray)
+  ),
+
+  speaker: (
+    background: #bfc3c6,
+    dotBg: map-get($baseColors, dark),
+    dotSize: .05rem,
+    dotSpace: .2rem
+  ),
+
+  hinge: (
+    background: map-get($baseColors, dark200),
+    itemBg: unquote('#000407 0%,#0c1013 11%,#2a2e31 22%,#43474a 33%,#525659 44%,#565a5d 56%,#575b5e 67%,#505457 78%,#424649 89%,#2c3033 100%')
+  ),
+
+  gap: (
+    background: unquote('#9ca0a3 0%,#9ea2a5 14%,#9a9ea1 43%,#9ba0a4 57%,#a7acb0 71%,#7c8083 86%,#787c7f 100%'),
+    radius: unquote('1rem')
+  ),
+
+  screen: (
+    background: map-get($baseColors, dark),
+    radius: 2.5rem,
+    barBg: unquote('#161616 0%,#1b1b1b 7%,#141414 36%,#101010 43%,#0c0c0c 71%,#040404 100%'),
+    barColor: map-get($baseColors, light)
+  )
+)

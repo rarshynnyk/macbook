@@ -1,0 +1,99 @@
+&__keys {
+  flex-direction: column;
+  flex: 0 0 5rem;
+
+  .laptop__key {
+    &--vertical {
+      height: 2.4rem;
+      &:first-child {
+        background-image: linear-gradient(to bottom, map-deep-get($laptop, key, verticalFirstBg));
+        border-radius: map-deep-get($laptop, key, radius) map-deep-get($laptop, key, radius) 0 0;
+        background-size: 100% .8rem;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+      }
+
+      &:last-child {
+        background-image: linear-gradient(to bottom, map-deep-get($laptop, key, verticalLastBg));
+        border-radius: 0 0 map-deep-get($laptop, key, radius) map-deep-get($laptop, key, radius);
+        background-size: 100% .8rem;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+&__key {
+    @include v-align;
+    @include rem-font-size(14px);
+    position: relative;
+    width: map-deep-get($laptop, key, width);
+    height: map-deep-get($laptop, key, height);
+    background: map-deep-get($laptop, key, defaultBg);
+    border-radius: map-deep-get($laptop, key, radius);
+    border: map-deep-get($laptop, key, borderColor);
+    margin: 0 0.2rem;
+    outline: none;
+    cursor: pointer;
+    @supports (display: flex) {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:active {
+      background: map-deep-get($laptop, key, activeBg);
+    }
+
+    &--small {
+      height: 2.2rem;
+    }
+
+    &--character {
+      background: linear-gradient(to bottom, map-deep-get($laptop, key, characterBg));
+    }
+
+    &--esc {
+      width: 7.7rem;
+    }
+
+    &--delete {
+        width: 7.8rem;
+    }
+
+    &--tab {
+        width: 8rem;
+    }
+
+    &--caps {
+      &:before {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        content: '';
+        width: .4rem;
+        height: .4rem;
+        background: map-get($baseColors, light);
+        border-radius: 50%;
+      }
+    }
+
+    &--caps,
+    &--enter {
+        width: 9rem;
+    }
+
+    &--shift {
+        width: 13.4rem;
+    }
+
+    &--space {
+      width: 26.5rem;
+    }
+
+    &--command {
+      width: 6.3rem;
+    }
+}

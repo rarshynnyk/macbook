@@ -1,0 +1,20 @@
+&__speaker {
+  position: absolute;
+  top: 5rem;
+  width: 2.6rem;
+  height: 28.3rem;
+  background: #000;
+  background:
+		linear-gradient(90deg, map-deep-get($laptop, speaker, background) (map-deep-get($laptop, speaker, dotSpace) - map-deep-get($laptop, speaker, dotSize)), transparent 1%) center,
+		linear-gradient(map-deep-get($laptop, speaker, background) (map-deep-get($laptop, speaker, dotSpace) - map-deep-get($laptop, speaker, dotSize)), transparent 1%) center,
+		map-deep-get($laptop, speaker, dotBg);
+	background-size: map-deep-get($laptop, speaker, dotSpace) map-deep-get($laptop, speaker, dotSpace);
+
+  &--left {
+    left: .65rem;
+  }
+
+  &--right {
+    right: .65rem;
+  }
+}

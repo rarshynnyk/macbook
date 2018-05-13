@@ -1,0 +1,24 @@
+&__hinge {
+    position: absolute;
+    top: 0;
+    left: 9.5rem;
+    right: 9.5rem;
+    height: 1rem;
+    background: map-deep-get($laptop, hinge, background);
+
+    .hinge {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 5rem;
+        background: linear-gradient(to bottom, map-deep-get($laptop, hinge, itemBg));
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            right: 0;
+        }
+    }
+}
